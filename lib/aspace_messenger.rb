@@ -43,7 +43,7 @@ class ASpaceMessenger
   def prepare_http
     http = Net::HTTP.new(uri.host, uri.port)
     http.max_retries = 0
-    http.read_timeout = 5
+    http.read_timeout = 60
     http.use_ssl = uri.scheme == 'https'
     http
   end
